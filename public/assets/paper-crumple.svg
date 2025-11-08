@@ -1,0 +1,14 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="crumple">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="5" />
+      <feDisplacementMap in="SourceGraphic" scale="30" />
+      <feGaussianBlur stdDeviation="1" />
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0.15" />
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#vignette)" filter="url(#crumple)" opacity="0.3" />
+</svg>

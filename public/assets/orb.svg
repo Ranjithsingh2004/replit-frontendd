@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="orbGradient" cx="40%" cy="40%">
+      <stop offset="0%" stop-color="#2FC9A8" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#1F8775" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#1E6F62" stop-opacity="0.3" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer dashed ring -->
+  <circle cx="100" cy="100" r="85" stroke="#1E6F62" stroke-width="2" fill="none" stroke-dasharray="8 4" opacity="0.4" />
+
+  <!-- Main orb -->
+  <circle cx="100" cy="100" r="70" fill="url(#orbGradient)" filter="url(#glow)" />
+
+  <!-- Inner highlight -->
+  <circle cx="85" cy="85" r="20" fill="white" opacity="0.2" />
+</svg>
